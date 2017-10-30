@@ -13,3 +13,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/bdcaf/vignetteEngineMake
 BugReports: https://github.com/bdcaf/vignetteEngineMake/issues
+Imports: tools
+Suggests: 
+VignetteBuilder: vignetteEngineMake
+RoxygenNote: 6.0.1
