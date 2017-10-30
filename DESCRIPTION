@@ -1,0 +1,15 @@
+Package: vignetteEngineMake
+Title: Using a Makefile to create vignettes
+Version: 0.0.0.9000
+Authors@R:
+            person(given = "Clemens", 
+                   family = "Ager", 
+                   role = c("aut", "cre"), 
+                   email = "clemens.ager@uibk.ac.at")
+Description: What the package does (one paragraph).
+Depends: R (>= 3.4.2)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/bdcaf/vignetteEngineMake
+BugReports: https://github.com/bdcaf/vignetteEngineMake/issues
