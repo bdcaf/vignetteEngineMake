@@ -9,6 +9,15 @@ define VIGNETTE_OPTIONS
   %\VignetteTangle{FALSE}
 endef
 
-example.pdf:
-	cd exampledata; latexmk example.tex
-	cp exampledata/example.pdf $@
+WORKDIR:=exampledata
+
+example.pdf: $(WORKDIR)/example.tex $(WORKDIR)/test1.tex
+	cd $(WORKDIR); latexmk example.tex
+	cp $(WORKDIR)/example.pdf $@
+
+%.R: 
+	touch $@
+
+$(WORKDIR)/test%.tex:
+	echo This is > $@
+	echo $@ >> $@
