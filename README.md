@@ -39,6 +39,17 @@ and one with `.R` for tangle.  For shared targets
 `include` can be used.
 
 
+## ToDos
+
+- testing - the package is currently so simple that I'm not
+    sure what to test for.
+- checking input - I don't want to introduce limitations, so
+    as long make doesn't complain I won't either.  There is
+    a mess when a target or path contains spaces,  I'm not
+    sure how to touch it.  Also escaping such that make, R and
+    the shell are all happy is a sisiphean task which I want
+    to avoid.
+
 ## background
 
 ### influences
@@ -75,6 +86,7 @@ I'm having some conversation on [stack overflow][sodiss].
 The workflow is still confusing to me.  Most people put
 Makefiles in their packages, but I still don't fully
 understand whether these are to be executed automatically.
+I suppose one could issue a `make all` before `R CMD build` - but I have never seen this.  I think it would be nice if `R CMD build` which is used to automatically install would do both.
 
 [R.rsp]:https://cran.r-project.org/web/packages/R.rsp/index.html
 [sodiss]: https://stackoverflow.com/questions/46741739/how-to-use-makefiles-with-r-cmd-build
