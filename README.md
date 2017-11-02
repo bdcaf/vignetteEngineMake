@@ -3,7 +3,13 @@
 I started this package as I wanted to build more complex
 vignette consisting of several sub files as well as data
 that was reused, but not supposed to go into the repo or
-into the package. 
+into the package.  Also I would like the to use the
+framework from R to manage package dependencies as weel as
+loading scripts (`devtools::load_all`).
+
+Personally I know how to achieve this with Makefiles.  There
+are some projects around to implement these inside R,
+currently I just don't see any advantage of these.
 
 Unfortunately I currently have just  half knowledge  how the
 build process works.  I will put more details of my research
@@ -25,12 +31,12 @@ define VIGNETTE_OPTIONS
 endef
 ```
 
-    The name of the definition is not important.  Additional
-    `%\Vignette` options may be placed in this region as
-    well.  Two targets are expected - both need to have the
-    same basename, but one with extension `.pdf` for weave
-    and one with `.R` for tangle.  For shared targets
-    `include` can be used.
+The name of the definition is unimportant.  Additional
+`%\Vignette` options may be placed in this region as
+well.  Two targets are expected - both need to have the
+same basename, but one with extension `.pdf` for weave
+and one with `.R` for tangle.  For shared targets
+`include` can be used.
 
 
 ## background
@@ -65,11 +71,10 @@ done manually.
 
 ### current best practices
 
-I'm having some conversation on [stack overflow][sodiss] -
-but I'm still confused.  Most people put Makefiles in their
-packages, but I still don't fully understand whether these
-are to be executed automatically.
-
+I'm having some conversation on [stack overflow][sodiss].
+The workflow is still confusing to me.  Most people put
+Makefiles in their packages, but I still don't fully
+understand whether these are to be executed automatically.
 
 [R.rsp]:https://cran.r-project.org/web/packages/R.rsp/index.html
 [sodiss]: https://stackoverflow.com/questions/46741739/how-to-use-makefiles-with-r-cmd-build

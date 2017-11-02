@@ -1,4 +1,3 @@
-# why
 define VIGNETTE_OPTIONS
   %\VignetteEngine{vignetteEngineMake::make}
 endef
