@@ -4,7 +4,7 @@ I started this package as I wanted to build more complex
 vignette consisting of several sub files as well as data
 that was reused, but not supposed to go into the repo or
 into the package.  Also I would like the to use the
-framework from R to manage package dependencies as weel as
+framework from R to manage package dependencies as well as
 loading scripts (`devtools::load_all`).
 
 Personally I know how to achieve this with Makefiles.  There
@@ -31,7 +31,7 @@ define VIGNETTE_OPTIONS
 endef
 ```
 
-The name of the definition is unimportant.  Additional
+The name of the definition is currently unimportant.  Additional
 `%\Vignette` options may be placed in this region as
 well.  Two targets are expected - both need to have the
 same basename, but one with extension `.pdf` for weave
@@ -39,7 +39,7 @@ and one with `.R` for tangle.  For shared targets
 `include` can be used.
 
 
-## ToDos
+## To dos
 
 - testing - the package is currently so simple that I'm not
     sure what to test for.
@@ -47,10 +47,10 @@ and one with `.R` for tangle.  For shared targets
     as long make doesn't complain I won't either.  There is
     a mess when a target or path contains spaces,  I'm not
     sure how to touch it.  Also escaping such that make, R and
-    the shell are all happy is a sisiphean task which I want
+    the shell are all happy is a Sisyphean task which I want
     to avoid.
 
-## background
+## background - my flow of influences
 
 ### influences
 
@@ -83,7 +83,7 @@ done manually.
 ### current best practices
 
 I'm having some conversation on [stack overflow][sodiss].
-The workflow is still confusing to me.  Most people put
+The work flow is still confusing to me.  Most people put
 Makefiles in their packages, but I still don't fully
 understand whether these are to be executed automatically.
 I suppose one could issue a `make all` before `R CMD build` - but I have never seen this.  I think it would be nice if `R CMD build` which is used to automatically install would do both.
