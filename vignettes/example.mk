@@ -1,3 +1,5 @@
+include Makefile
+
 define VIGNETTE_OPTIONS
   %\VignetteEngine{vignetteEngineMake::make}
 endef
@@ -14,3 +16,4 @@ example.pdf: $(WORKDIR)/example.tex $(WORKDIR)/test1.tex
 $(WORKDIR)/test%.tex:
 	echo This is > $@
 	echo $@ >> $@
+

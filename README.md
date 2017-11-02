@@ -49,6 +49,10 @@ and one with `.R` for tangle.  For shared targets
     sure how to touch it.  Also escaping such that make, R and
     the shell are all happy is a Sisyphean task which I want
     to avoid.
+- checking whether a command is installed.  Just currently
+    thinking how to do this while keeping the `.mk` files
+    simple.
+
 
 ## background - my flow of influences
 
@@ -78,7 +82,8 @@ calls.  One run for the default target on line 558, and
 immediately after optionally clean on line 562.  However
 this Makefile is only executed if other vignettes are in the
 directory and copying stuff to `../inst/doc` needs to be
-done manually.
+done manually.  I suppose this was intended as alternative
+to texi2pdf.
 
 ### current best practices
 
