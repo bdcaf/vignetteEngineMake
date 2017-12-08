@@ -1,6 +1,6 @@
 Package: vignetteEngineMake
 Title: Using a Makefile to create vignettes
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R:
             person(given = "Clemens", 
                    family = "Ager", 

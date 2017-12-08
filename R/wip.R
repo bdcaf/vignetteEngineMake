@@ -1,6 +1,5 @@
-function (package, dir, lib.loc = NULL, quiet = TRUE, clean = TRUE,
-    tangle = FALSE)
-{
+wip <- function (package, dir, lib.loc = NULL, quiet = TRUE, clean = TRUE,
+    tangle = FALSE) {
     vigns <- pkgVignettes(package = package, dir = dir, lib.loc = lib.loc,
         check = TRUE)
     if (is.null(vigns))

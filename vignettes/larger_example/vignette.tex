@@ -1,0 +1,35 @@
+\documentclass[twocolumn]{article}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+
+\input{knitr_preamble.tex}
+
+\title{Larger Example for vignetteEngineMake}
+\author{Clemens~Ager}
+\date{2017-12-08}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  This shows a complex example how to build a vignette with vignetteEngineMake.
+\end{abstract}
+
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\section{Intro}
+
+vignetteEngineMake is a vignette engine for R \cite{rman}.
+
+\input{render/data.tex}
+
+\appendix 
+
+\printbibliography{}
+
+\end{document}

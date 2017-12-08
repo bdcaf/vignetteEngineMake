@@ -1,5 +1,3 @@
-include Makefile
-
 define VIGNETTE_OPTIONS
   %\VignetteEngine{vignetteEngineMake::make}
 endef

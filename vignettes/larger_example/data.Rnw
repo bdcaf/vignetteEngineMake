@@ -1,0 +1,14 @@
+\section{Data}
+
+I created some data which is loaded now.
+
+<<setup>>=
+load("data/data.Rdata")
+@
+
+In total the data contains \Sexpr{length(data)} values the values are shown in
+\fref{fig:plot}.
+
+<<plot, fig.cap = "a plot of data">>=
+plot(data)
+@
