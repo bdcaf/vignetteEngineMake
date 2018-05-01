@@ -93,6 +93,16 @@ Makefiles in their packages, but I still don't fully
 understand whether these are to be executed automatically.
 I suppose one could issue a `make all` before `R CMD build` - but I have never seen this.  I think it would be nice if `R CMD build` which is used to automatically install would do both.
 
+### not to self
+
+when installing from scratch I needed to do:
+
+    build(vignettes = F)
+    build_vignettes()
+    build()
+
+then I can install the package.
+
 [R.rsp]:https://cran.r-project.org/web/packages/R.rsp/index.html
 [sodiss]: https://stackoverflow.com/questions/46741739/how-to-use-makefiles-with-r-cmd-build
 [Vignettes.R]: https://github.com/wch/r-source/blob/trunk/src/library/tools/R/Vignettes.R
